@@ -1,0 +1,2392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bella Danza Quinceañera | Elegant Dance Choreography & Waltz Lessons</title>
+  <meta name="description" content="Crafting magical, celebratory, and custom quinceañera choreography. From traditional waltzes to high-energy surprise dances, we help you shine on your special day.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & CUSTOM VARIABLES
+       ========================================================================== */
+    :root {
+      /* Color Palette */
+      --color-bg-ivory: #faf7f2;         /* Warm cream/ivory background */
+      --color-bg-white: #ffffff;         /* Pure white for overlays/cards */
+      --color-primary-blush: #f3e5e5;    /* Very soft blush pink */
+      --color-primary-rose: #dfb2b5;     /* Medium blush/rose gold tone */
+      --color-accent-wine: #7a1f3d;      /* Deep magenta/wine red */
+      --color-accent-dark: #4d0f23;      /* Deepest wine red for high-contrast text */
+      --color-gold-metallic: #d4af37;   /* Classic gold metallic */
+      --color-gold-soft: #c5a059;       /* Soft satin gold accent */
+      --color-gold-light: #ebdca2;      /* Champagne shine highlight */
+      --color-text-body: #3c3033;       /* Off-black warm grey body text */
+      --color-text-muted: #7d6b6e;      /* Soft muted warm grey */
+      
+      /* Font Pairings */
+      --font-headers: 'Playfair Display', Georgia, serif;
+      --font-script: 'Great Vibes', cursive;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      /* Spacing */
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --spacing-xl: 8rem;
+
+      /* Layout Transitions */
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: all 0.2s ease;
+      --border-radius-sm: 8px;
+      --border-radius-md: 16px;
+      --border-radius-lg: 32px;
+      --box-shadow-soft: 0 10px 30px rgba(122, 31, 61, 0.04);
+      --box-shadow-medium: 0 15px 40px rgba(122, 31, 61, 0.08);
+      --box-shadow-gold: 0 10px 25px rgba(212, 175, 55, 0.15);
+    }
+
+    /* ==========================================================================
+       BASE STYLES & RESET
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--color-bg-ivory);
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+      background-color: var(--color-bg-ivory);
+      position: relative;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--color-bg-ivory);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-primary-rose);
+      border-radius: var(--border-radius-sm);
+      border: 2px solid var(--color-bg-ivory);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-accent-wine);
+    }
+
+    /* Decorative Sparkle Layer */
+    .sparkle-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: radial-gradient(var(--color-gold-metallic) 1px, transparent 1px);
+      background-size: 120px 120px;
+      opacity: 0.12;
+      z-index: 1;
+    }
+
+    /* ==========================================================================
+       TYPOGRAPHY
+       ========================================================================== */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-headers);
+      color: var(--color-accent-wine);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .highlight-script {
+      font-family: var(--font-script);
+      color: var(--color-gold-soft);
+      font-size: 1.5em;
+      font-weight: 400;
+      line-height: 0.5;
+      display: inline-block;
+      transform: translateY(5px);
+      text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+    }
+
+    .section-subtitle {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--color-gold-soft);
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .section-title {
+      font-family: var(--font-headers);
+      font-size: 2.4rem;
+      text-align: center;
+      color: var(--color-accent-wine);
+      margin-bottom: 1.5rem;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .section-desc-center {
+      max-width: 600px;
+      margin: 0 auto 3.5rem auto;
+      text-align: center;
+      color: var(--color-text-muted);
+      font-size: 1.1rem;
+    }
+
+    .paragraph {
+      font-size: 1.05rem;
+      color: var(--color-text-body);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
+       BUTTONS & ACTIONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 2.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: var(--border-radius-lg);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold-metallic), var(--color-gold-soft));
+      color: var(--color-accent-dark);
+      border: none;
+      box-shadow: var(--box-shadow-gold);
+      background-size: 200% auto;
+    }
+
+    .btn-primary:hover {
+      background-position: right center;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-accent-wine);
+      color: var(--color-bg-ivory);
+      border: 1px solid var(--color-accent-wine);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-accent-dark);
+      border-color: var(--color-accent-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(122, 31, 61, 0.2);
+    }
+
+    .btn-secondary-outline {
+      background-color: transparent;
+      color: var(--color-accent-wine);
+      border: 1px solid var(--color-accent-wine);
+    }
+
+    .btn-secondary-outline:hover {
+      background-color: var(--color-accent-wine);
+      color: var(--color-bg-white);
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================================
+       SCROLL REVEAL ANIMATIONS
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+      z-index: 1000;
+      transition: var(--transition-smooth);
+    }
+
+    .navbar-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-link {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-script {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--color-accent-wine);
+      line-height: 0.9;
+    }
+
+    .logo-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--color-gold-soft);
+      margin-top: 2px;
+      padding-left: 2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-item {
+      text-decoration: none;
+      color: var(--color-text-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      position: relative;
+      padding: 0.3rem 0;
+    }
+
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--color-gold-soft);
+      transition: var(--transition-fast);
+    }
+
+    .nav-item:hover::after {
+      width: 100%;
+    }
+
+    .nav-item:hover {
+      color: var(--color-accent-wine);
+    }
+
+    .btn-nav-cta {
+      background-color: var(--color-accent-wine);
+      color: var(--color-bg-white) !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--border-radius-lg);
+      font-weight: 600;
+      transition: var(--transition-smooth);
+      border: 1px solid var(--color-accent-wine);
+    }
+
+    .btn-nav-cta:hover {
+      background-color: transparent;
+      color: var(--color-accent-wine) !important;
+      transform: translateY(-2px);
+    }
+
+    .btn-nav-cta::after {
+      display: none;
+    }
+
+    /* Mobile Toggle */
+    .mobile-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1001;
+    }
+
+    .mobile-toggle .bar {
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-accent-wine);
+      transition: var(--transition-fast);
+      border-radius: 2px;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 4rem 2rem;
+      overflow: hidden;
+    }
+
+    .hero-bg-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 6s ease-out;
+    }
+
+    .hero-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        var(--color-bg-ivory) 0%, 
+        var(--color-bg-ivory) 15%, 
+        rgba(250, 247, 242, 0.8) 60%, 
+        rgba(250, 247, 242, 0) 100%
+      );
+    }
+
+    .hero-content {
+      max-width: 600px;
+      width: 100%;
+      z-index: 2;
+      margin-left: calc((100% - 1200px) / 2 + 2rem);
+    }
+
+    /* When window size is smaller than container */
+    @media (max-width: 1240px) {
+      .hero-content {
+        margin-left: 0;
+      }
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--color-gold-soft);
+      margin-bottom: 1.5rem;
+      background-color: rgba(223, 178, 181, 0.15);
+      padding: 0.4rem 1.2rem;
+      border-radius: var(--border-radius-lg);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .gold-sparkle {
+      color: var(--color-gold-metallic);
+      animation: pulse-sparkle 2s infinite ease-in-out;
+    }
+
+    .hero-title {
+      font-size: 3.8rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 24px;
+      height: 40px;
+      border: 2px solid var(--color-gold-soft);
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      padding-top: 6px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .scroll-dot {
+      width: 4px;
+      height: 8px;
+      background-color: var(--color-accent-wine);
+      border-radius: 2px;
+      animation: scroll-down 1.5s infinite ease-in-out;
+    }
+
+    /* ==========================================================================
+       DIVIDERS
+       ========================================================================== */
+    .section-divider-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 400px;
+      margin: 4rem auto;
+      gap: 1.5rem;
+    }
+
+    .gold-line {
+      height: 1px;
+      flex-grow: 1;
+      background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.5) 50%, rgba(212,175,55,0) 100%);
+    }
+
+    .gold-crest {
+      color: var(--color-gold-metallic);
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    /* ==========================================================================
+       ABOUT SECTION
+       ========================================================================== */
+    .about-section {
+      padding: 4rem 2rem;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-media {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-frame-gold {
+      position: relative;
+      padding: 1rem;
+      border-radius: var(--border-radius-md);
+      background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold-metallic), var(--color-gold-soft));
+      box-shadow: var(--box-shadow-medium);
+    }
+
+    .image-frame-gold::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 1px solid var(--color-gold-soft);
+      border-radius: calc(var(--border-radius-md) + 10px);
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .about-img {
+      width: 100%;
+      max-width: 450px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: calc(var(--border-radius-md) - 6px);
+      display: block;
+    }
+
+    .about-text .section-subtitle {
+      text-align: left;
+    }
+
+    .about-text .section-title {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .about-signature {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .signature-text {
+      font-family: var(--font-script);
+      font-size: 3rem;
+      color: var(--color-accent-wine);
+      line-height: 0.9;
+      margin-bottom: 0.2rem;
+    }
+
+    .signature-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-gold-soft);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       SERVICES SECTION
+       ========================================================================== */
+    .services-section {
+      padding: 6rem 2rem;
+      background-color: rgba(223, 178, 181, 0.08);
+      position: relative;
+    }
+
+    .services-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .service-card {
+      background-color: var(--color-bg-white);
+      border: 1px solid rgba(223, 178, 181, 0.25);
+      border-radius: var(--border-radius-md);
+      padding: 3rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--box-shadow-soft);
+      transition: var(--transition-smooth);
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: var(--color-primary-rose);
+      transition: var(--transition-fast);
+    }
+
+    .card-glow {
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(223, 178, 181, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+      pointer-events: none;
+      transition: var(--transition-smooth);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--box-shadow-medium);
+      border-color: rgba(212, 175, 55, 0.25);
+    }
+
+    .service-card:hover::after {
+      background: linear-gradient(90deg, var(--color-gold-metallic), var(--color-gold-light));
+    }
+
+    .service-card:hover .card-glow {
+      transform: scale(1.2);
+    }
+
+    .service-tier-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--color-gold-soft);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-name {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--color-accent-wine);
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+      flex-grow: 0;
+    }
+
+    .service-price {
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+    }
+
+    .price-val {
+      font-family: var(--font-headers);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--color-accent-wine);
+    }
+
+    .price-period {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 2.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .service-features li {
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      color: var(--color-text-body);
+    }
+
+    .gold-check {
+      color: var(--color-gold-metallic);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+
+    .card-cta {
+      width: 100%;
+    }
+
+    /* Featured Card Override */
+    .service-card.featured {
+      border: 1px solid var(--color-primary-rose);
+      box-shadow: 0 20px 45px rgba(122, 31, 61, 0.08);
+      transform: scale(1.03);
+    }
+
+    .service-card.featured::after {
+      background: linear-gradient(90deg, var(--color-gold-light), var(--color-gold-metallic), var(--color-gold-soft));
+      height: 6px;
+    }
+
+    .service-card.featured:hover {
+      transform: translateY(-12px) scale(1.03);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: linear-gradient(135deg, var(--color-accent-wine), var(--color-accent-dark));
+      color: var(--color-bg-white);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 0.3rem 0.9rem;
+      border-radius: var(--border-radius-lg);
+    }
+
+    /* ==========================================================================
+       GALLERY SECTION
+       ========================================================================== */
+    .gallery-section {
+      padding: 6rem 2rem;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      box-shadow: var(--box-shadow-soft);
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(77, 15, 35, 0.8) 0%, rgba(122, 31, 61, 0.4) 60%, rgba(122, 31, 61, 0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-icon {
+      font-size: 2rem;
+      color: var(--color-gold-metallic);
+      font-weight: 300;
+      margin-bottom: 0.2rem;
+      transform: translateY(10px);
+      transition: var(--transition-smooth);
+    }
+
+    .gallery-text {
+      font-family: var(--font-headers);
+      font-size: 1.15rem;
+      color: var(--color-bg-white);
+      transform: translateY(10px);
+      transition: var(--transition-smooth);
+      font-weight: 500;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: var(--box-shadow-medium);
+    }
+
+    .gallery-item:hover .gallery-thumb {
+      transform: scale(1.1);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-item:hover .gallery-icon,
+    .gallery-item:hover .gallery-text {
+      transform: translateY(0);
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 10, 12, 0.95);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: scale(0.9);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lightbox.active .lightbox-content {
+      transform: scale(1);
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: var(--border-radius-sm);
+      border: 2px solid var(--color-gold-soft);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-caption {
+      color: var(--color-bg-ivory);
+      font-family: var(--font-headers);
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 3rem;
+      color: var(--color-bg-ivory);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      z-index: 2001;
+    }
+
+    .lightbox-close:hover {
+      color: var(--color-gold-metallic);
+      transform: scale(1.1);
+    }
+
+    /* ==========================================================================
+       TESTIMONIALS SECTION
+       ========================================================================== */
+    .testimonials-section {
+      padding: 6rem 2rem;
+      background-color: rgba(212, 175, 55, 0.05);
+    }
+
+    .testimonials-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      background-color: var(--color-bg-white);
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      border-radius: var(--border-radius-md);
+      padding: 4rem 5rem;
+      box-shadow: var(--box-shadow-soft);
+      overflow: hidden;
+    }
+
+    .testimonials-slider {
+      display: flex;
+      position: relative;
+      height: auto;
+    }
+
+    .testimonial-slide {
+      min-width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateX(50px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .testimonial-slide.active {
+      opacity: 1;
+      transform: translateX(0);
+      position: relative;
+      pointer-events: auto;
+    }
+
+    .testimonial-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .quote-symbol {
+      font-family: var(--font-headers);
+      font-size: 6rem;
+      color: rgba(212, 175, 55, 0.2);
+      line-height: 0.3;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--color-text-body);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .author-name {
+      font-family: var(--font-headers);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-accent-wine);
+    }
+
+    .author-role {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 0.2rem;
+    }
+
+    /* Slider Controls */
+    .slider-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    .control-btn {
+      background-color: transparent;
+      border: 1px solid rgba(122, 31, 61, 0.15);
+      color: var(--color-accent-wine);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .control-btn:hover {
+      background-color: var(--color-accent-wine);
+      color: var(--color-bg-white);
+      border-color: var(--color-accent-wine);
+    }
+
+    .slider-dots {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: rgba(122, 31, 61, 0.15);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .dot.active {
+      background-color: var(--color-accent-wine);
+      transform: scale(1.3);
+    }
+
+    /* ==========================================================================
+       BOOKING & CONTACT SECTION
+       ========================================================================== */
+    .booking-section {
+      padding: 6rem 2rem;
+    }
+
+    .booking-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .booking-info .section-subtitle {
+      text-align: left;
+    }
+
+    .booking-info .section-title {
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .info-contacts {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      width: 48px;
+      height: 48px;
+      background-color: var(--color-primary-blush);
+      color: var(--color-accent-wine);
+      font-size: 1.4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .info-label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-gold-soft);
+      font-weight: 700;
+    }
+
+    .info-link, .info-text {
+      font-size: 1.05rem;
+      color: var(--color-text-body);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition-fast);
+    }
+
+    .info-link:hover {
+      color: var(--color-accent-wine);
+    }
+
+    /* Booking Form */
+    .booking-form-wrapper {
+      background-color: var(--color-bg-white);
+      border: 1px solid rgba(223, 178, 181, 0.25);
+      border-radius: var(--border-radius-md);
+      padding: 3rem;
+      box-shadow: var(--box-shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .booking-form-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--color-gold-light), var(--color-gold-metallic), var(--color-gold-soft));
+    }
+
+    .form-title-area {
+      margin-bottom: 2.5rem;
+    }
+
+    .form-title-area h4 {
+      font-size: 1.6rem;
+      color: var(--color-accent-wine);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-title-area p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(122, 31, 61, 0.15);
+      background-color: var(--color-bg-ivory);
+      border-radius: var(--border-radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-text-body);
+      transition: var(--transition-fast);
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--color-gold-soft);
+      background-color: var(--color-bg-white);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+
+    .form-label {
+      position: absolute;
+      top: 0.9rem;
+      left: 1rem;
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+      transition: var(--transition-fast);
+      pointer-events: none;
+    }
+
+    /* Floating labels effect */
+    .form-control:focus ~ .form-label,
+    .form-control:not(:placeholder-shown) ~ .form-label {
+      top: -0.65rem;
+      left: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background-color: var(--color-bg-white);
+      padding: 0 0.4rem;
+      color: var(--color-accent-wine);
+    }
+
+    .select-control {
+      appearance: none;
+      cursor: pointer;
+    }
+
+    .select-label {
+      top: 0.9rem;
+    }
+
+    .select-control:focus ~ .select-label,
+    .select-control:valid ~ .select-label {
+      top: -0.65rem;
+      left: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: var(--color-bg-white);
+      padding: 0 0.4rem;
+      color: var(--color-accent-wine);
+    }
+
+    /* Custom styling for date inputs to override browser styles */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      filter: sepia(1) saturate(5) hue-rotate(330deg); /* align calendar icon with pink/gold */
+    }
+
+    /* Form validation error states */
+    .form-control.error {
+      border-color: #d32f2f;
+    }
+
+    .form-control.error:focus {
+      box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+    }
+
+    .form-error {
+      position: absolute;
+      bottom: -1.3rem;
+      left: 0;
+      font-size: 0.75rem;
+      color: #d32f2f;
+      opacity: 0;
+      transition: var(--transition-fast);
+      font-weight: 500;
+    }
+
+    .form-control.error ~ .form-error {
+      opacity: 1;
+    }
+
+    .text-group {
+      margin-bottom: 2.5rem;
+    }
+
+    .text-control {
+      resize: vertical;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 1.1rem;
+    }
+
+    .form-success-message {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-bg-white);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      text-align: center;
+      z-index: 10;
+      border-radius: var(--border-radius-md);
+      transition: var(--transition-smooth);
+    }
+
+    .form-success-message.active {
+      display: flex;
+      animation: fade-in 0.4s ease forwards;
+    }
+
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      border-radius: 50%;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 5px 15px rgba(46, 125, 50, 0.1);
+    }
+
+    .form-success-message h5 {
+      font-size: 1.5rem;
+      color: var(--color-accent-wine);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-success-message p {
+      color: var(--color-text-muted);
+      max-width: 380px;
+    }
+
+    /* ==========================================================================
+       FOOTER SECTION
+       ========================================================================== */
+    .footer {
+      background-color: var(--color-accent-dark);
+      color: rgba(250, 247, 242, 0.7);
+      padding: 5rem 2rem 3rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.4) 50%, rgba(212,175,55,0) 100%);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo {
+      color: var(--color-bg-ivory);
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .footer-tagline {
+      max-width: 450px;
+      margin: 0 auto;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(250, 247, 242, 0.65);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background-color: rgba(250, 247, 242, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: rgba(250, 247, 242, 0.5);
+    }
+
+    .designer-credits {
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       ANIMATIONS & KEYFRAMES
+       ========================================================================== */
+    @keyframes scroll-down {
+      0% { transform: translateY(0); opacity: 0; }
+      50% { transform: translateY(6px); opacity: 1; }
+      100% { transform: translateY(12px); opacity: 0; }
+    }
+
+    @keyframes pulse-sparkle {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+      50% { transform: scale(1.2) rotate(15deg); opacity: 1; }
+    }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (MEDIA QUERIES)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-title {
+        font-size: 3.2rem;
+      }
+      
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .about-text .section-subtitle,
+      .about-text .section-title {
+        text-align: center;
+      }
+      
+      .about-media {
+        order: -1;
+      }
+      
+      .about-img {
+        height: 400px;
+        max-width: 100%;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .service-card.featured {
+        transform: scale(1);
+      }
+      
+      .service-card.featured:hover {
+        transform: translateY(-10px);
+      }
+      
+      .booking-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .booking-info .section-subtitle,
+      .booking-info .section-title {
+        text-align: center;
+      }
+      
+      .info-contacts {
+        align-items: center;
+      }
+      
+      .info-item {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-container {
+        padding: 0.8rem 1.5rem;
+      }
+      
+      .mobile-toggle {
+        display: flex;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 68px; /* navbar height */
+        left: 0;
+        width: 100%;
+        background-color: var(--color-bg-ivory);
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        box-shadow: 0 10px 20px rgba(122, 31, 61, 0.05);
+        transform: translateY(-150%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      }
+      
+      .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+      /* Mobile toggle animations */
+      .mobile-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .mobile-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .mobile-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 8rem;
+        text-align: center;
+      }
+      
+      .hero-bg-container {
+        width: 100%;
+        height: 100%;
+        opacity: 0.3; /* fade it out more on mobile to keep typography legible */
+      }
+      
+      .hero-gradient-overlay {
+        background: radial-gradient(circle, rgba(250, 247, 242, 0.75) 0%, var(--color-bg-ivory) 85%);
+      }
+      
+      .hero-content {
+        max-width: 100%;
+      }
+      
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .hero-actions {
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .slider-wrapper {
+        padding: 3rem 2rem;
+      }
+      
+      .quote-symbol {
+        font-size: 4rem;
+      }
+      
+      .testimonial-text {
+        font-size: 1.05rem;
+      }
+
+      .booking-form-wrapper {
+        padding: 2rem 1.5rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2.6rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Sparkle Overlays -->
+  <div class="sparkle-layer" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo-link" id="logo">
+        <span class="logo-script">Bella Danza</span>
+        <span class="logo-subtitle">QUINCEAÑERA</span>
+      </a>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-toggle" aria-label="Toggle menu" id="mobile-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-item">Our Story</a>
+        <a href="#services" class="nav-item">Choreography Packages</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="#testimonials" class="nav-item">Love Letters</a>
+        <a href="#booking" class="nav-item btn-nav-cta">Book Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-container">
+      <img src="src/assets/hero-dancer.png" alt="Quinceañera dancer in elegant rose gold ballgown" class="hero-img">
+      <div class="hero-gradient-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="reveal">
+        <div class="hero-tag">
+          <svg class="gold-sparkle" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l2.4 7.2L22 10l-6 4.8 2.4 7.2-6.4-4.8-6.4 4.8L8 14.8 2 10l7.6-.8z"/></svg>
+          Choreography & Waltz Lessons
+          <svg class="gold-sparkle" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l2.4 7.2L22 10l-6 4.8 2.4 7.2-6.4-4.8-6.4 4.8L8 14.8 2 10l7.6-.8z"/></svg>
+        </div>
+        <h1 class="hero-title">Step into Your <br><span class="highlight-script">Royal Spotlight</span></h1>
+        <p class="hero-desc">
+          Crafting breathtaking waltzes and show-stopping surprise dances. We transform quinceañeras and their courts into confident, elegant dancers for a celebration that will be remembered forever.
+        </p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary">Plan Your Dance</a>
+          <a href="#services" class="btn btn-secondary">Explore Packages</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-dot"></span>
+    </a>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-divider-container" aria-hidden="true">
+    <div class="gold-line"></div>
+    <div class="gold-crest">&#10047;</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="about-grid">
+        <div class="about-media reveal">
+          <div class="image-frame-gold">
+            <img src="src/assets/about-studio.png" alt="Isabella Rivera instructing a waltz class" class="about-img">
+          </div>
+        </div>
+        
+        <div class="about-text reveal">
+          <h2 class="section-subtitle">Meet Isabella Rivera</h2>
+          <h3 class="section-title">Choreographing Dreams into Beautiful Reality</h3>
+          <p class="paragraph">
+            Every young lady deserves to feel like royalty on her Quinceañera. For over a decade, I have had the privilege of training hundreds of girls, fathers, and courts of honor, helping them command the ballroom with grace, posture, and poise.
+          </p>
+          <p class="paragraph">
+            Whether you have danced for years or have never taken a single step on a dance floor, our warm, encouraging, and fun lessons are custom-paced for you. We focus not just on the steps, but on building the confidence that lets your inner radiance shine.
+          </p>
+          <div class="about-signature">
+            <span class="signature-text">Isabella Rivera</span>
+            <span class="signature-title">Founder & Head Choreographer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="section-divider-container" aria-hidden="true">
+    <div class="gold-line"></div>
+    <div class="gold-crest">&#10047;</div>
+    <div class="gold-line"></div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="services-container">
+      <div class="section-header reveal">
+        <h2 class="section-subtitle">Choreography Packages</h2>
+        <h3 class="section-title">Designed for Your Perfect Celebration</h3>
+        <p class="section-desc-center">
+          From the traditional waltz to high-energy surprise routines, we have the perfect package to fit your vision and court of honor size.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Tier 1 -->
+        <div class="service-card reveal">
+          <div class="card-glow"></div>
+          <div class="service-tier-tag">Elegant & Classic</div>
+          <h4 class="service-name">The Graceful Waltz</h4>
+          <p class="service-desc">The core traditional waltz and entrance choreography. Perfect for smaller courts or direct family dances.</p>
+          <div class="service-price">
+            <span class="price-val">$750</span>
+            <span class="price-period">/ package</span>
+          </div>
+          
+          <ul class="service-features">
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Traditional Waltz Choreography
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Father-Daughter Dance Lesson
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              5 Private Rehearsals (1 Hour Each)
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Court Coordination (Up to 4 couples)
+            </li>
+          </ul>
+          
+          <a href="#booking" class="btn btn-secondary-outline card-cta">Inquire Now</a>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="service-card featured reveal">
+          <div class="card-glow"></div>
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-tier-tag">Dynamic & Celebratory</div>
+          <h4 class="service-name">The Celebration Suite</h4>
+          <p class="service-desc">The ultimate experience blending classic ballroom elegance with a modern, high-energy surprise dance mix.</p>
+          <div class="service-price">
+            <span class="price-val">$1,450</span>
+            <span class="price-period">/ package</span>
+          </div>
+          
+          <ul class="service-features">
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Full Waltz + Surprise Dance Mix
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Father-Daughter & Grand Entrance
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              10 Private Rehearsals (1 Hour Each)
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Court Coordination (Up to 8 couples)
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Custom Music Audio Editing & Mixing
+            </li>
+          </ul>
+          
+          <a href="#booking" class="btn btn-primary card-cta">Reserve Your Date</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="service-card reveal">
+          <div class="card-glow"></div>
+          <div class="service-tier-tag">Grand & VIP</div>
+          <h4 class="service-name">The Royal Spotlight</h4>
+          <p class="service-desc">Complete end-to-end dance direction. Rehearsals, multi-genre surprises, family dances, and on-site support.</p>
+          <div class="service-price">
+            <span class="price-val">$2,200</span>
+            <span class="price-period">/ package</span>
+          </div>
+          
+          <ul class="service-features">
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Multi-Genre Waltz & Custom Baile Sorpresa
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Waltz, Surprise, Entrance & Toast Routine
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              15 Private Rehearsals + Custom Scheduling
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Unlimited Court of Honor Members
+            </li>
+            <li>
+              <svg class="gold-check" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              On-Site Venue Choreography Run-Through
+            </li>
+          </ul>
+          
+          <a href="#booking" class="btn btn-secondary-outline card-cta">Inquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-container">
+      <div class="section-header reveal">
+        <h2 class="section-subtitle">A Glimpse of the Magic</h2>
+        <h3 class="section-title">Moments in Motion</h3>
+        <p class="section-desc-center">
+          Flip through the highlights of our beautiful quinceañeras and their courts celebrating their hard work.
+        </p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" data-image="src/assets/hero-dancer.png" data-caption="Sophia's Grand Waltz Entrance - June 2026">
+          <img src="src/assets/hero-dancer.png" alt="Sophia dancing at her quinceañera" class="gallery-thumb">
+          <div class="gallery-overlay">
+            <span class="gallery-icon">+</span>
+            <span class="gallery-text">Sophia's Grand Waltz</span>
+          </div>
+        </div>
+        
+        <div class="gallery-item" data-image="src/assets/services-waltz.png" data-caption="Studio rehearsal session for the court of honor waltz">
+          <img src="src/assets/services-waltz.png" alt="Quinceañera rehearsal waltz class" class="gallery-thumb">
+          <div class="gallery-overlay">
+            <span class="gallery-icon">+</span>
+            <span class="gallery-text">Studio Rehearsal Session</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-image="src/assets/gallery-1.png" data-caption="Camila and her Chambelanes surprise dance mix">
+          <img src="src/assets/gallery-1.png" alt="High-energy surprise dance" class="gallery-thumb">
+          <div class="gallery-overlay">
+            <span class="gallery-icon">+</span>
+            <span class="gallery-text">Camila's Surprise Dance</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-image="src/assets/gallery-2.png" data-caption="Traditional Crown Waltz performance with full Court of Honor">
+          <img src="src/assets/gallery-2.png" alt="Waltz performance at ballroom" class="gallery-thumb">
+          <div class="gallery-overlay">
+            <span class="gallery-icon">+</span>
+            <span class="gallery-text">Traditional Waltz Performance</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-image="src/assets/gallery-3.png" data-caption="Valerie's touching father-daughter dance">
+          <img src="src/assets/gallery-3.png" alt="Father daughter quinceañera dance" class="gallery-thumb">
+          <div class="gallery-overlay">
+            <span class="gallery-icon">+</span>
+            <span class="gallery-text">Father-Daughter Dance</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-image="src/assets/about-studio.png" data-caption="Isabella Rivera presenting waltz fundamentals in studio">
+          <img src="src/assets/about-studio.png" alt="Instructor in dance studio" class="gallery-thumb">
+          <div class="gallery-overlay">
+            <span class="gallery-icon">+</span>
+            <span class="gallery-text">Waltz Fundamentals Studio Session</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close modal">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" id="lightbox-image">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="testimonials-container reveal">
+      <div class="section-header">
+        <h2 class="section-subtitle">Love Letters</h2>
+        <h3 class="section-title">Words from Our Families</h3>
+      </div>
+
+      <div class="slider-wrapper">
+        <div class="testimonials-slider" id="testimonials-slider">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              <span class="quote-symbol">“</span>
+              <p class="testimonial-text">
+                Isabella didn't just teach choreography; she gave my daughter Valeria the confidence to stand tall and smile in front of 200 guests. The waltz was flawless, and the surprise dance was the absolute highlight of the night! Isabella is a dream to work with.
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">Maria G.</span>
+                <span class="author-role">Mother of Valerie (Quinceañera 2025)</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <span class="quote-symbol">“</span>
+              <p class="testimonial-text">
+                I was so nervous because my Chambelanes had never danced before. Isabella had so much patience with them! She made rehearsals fun, and on my quince day, we performed our hip-hop and waltz mix perfectly. I felt like a real princess!
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">Camila R.</span>
+                <span class="author-role">Quinceañera (Celebrated Oct 2025)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <span class="quote-symbol">“</span>
+              <p class="testimonial-text">
+                The Royal Spotlight package was worth every single penny. Isabella coordinated our huge court of 14 people and worked directly with our venue for the soundcheck. The father-daughter waltz made everyone cry. Thank you for making my daughter's dream come true!
+              </p>
+              <div class="testimonial-author">
+                <span class="author-name">Gabriela S.</span>
+                <span class="author-role">Mother of Sophia (Quinceañera 2026)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="control-btn prev-btn" id="prev-testimonial" aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </button>
+          
+          <div class="slider-dots" id="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+
+          <button class="control-btn next-btn" id="next-testimonial" aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking-section" id="booking">
+    <div class="booking-container reveal">
+      <div class="booking-grid">
+        
+        <div class="booking-info">
+          <h2 class="section-subtitle">Let's Dance</h2>
+          <h3 class="section-title">Schedule Your Complimentary Dance Consultation</h3>
+          <p class="paragraph">
+            Let's sit down (and dance a little!) to discuss your vision, theme, music preferences, and court size. Consultations are held at our studio and last about 45 minutes.
+          </p>
+          
+          <div class="info-contacts">
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">&#9993;</span>
+              <div>
+                <span class="info-label">Email Us</span>
+                <a href="mailto:hello@belladanzaquince.com" class="info-link">hello@belladanzaquince.com</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">&#9743;</span>
+              <div>
+                <span class="info-label">Call or Text</span>
+                <a href="tel:+12015550189" class="info-link">(201) 555-0189</a>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">&#128205;</span>
+              <div>
+                <span class="info-label">Our Dance Studio</span>
+                <span class="info-text">145 Elegance Way, Suite B, Hoboken, NJ 07030</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-form-wrapper">
+          <form class="booking-form" id="booking-form" name="contact" netlify netlify-honeypot="bot-field" novalidate>
+            <!-- Netlify bot protection (hidden) -->
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden" style="display:none;">
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-title-area">
+              <h4>Request a Date</h4>
+              <p>Fill out the details below and we will contact you within 24 hours.</p>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="parent-name" name="name" class="form-control" placeholder=" " required>
+                <label for="parent-name" class="form-label">Your Name</label>
+                <span class="form-error">Please enter your name</span>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="dancer-name" name="quinceanera-name" class="form-control" placeholder=" " required>
+                <label for="dancer-name" class="form-label">Quinceañera's Name</label>
+                <span class="form-error">Please enter her name</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-control" placeholder=" " required>
+                <label for="email" class="form-label">Email Address</label>
+                <span class="form-error">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder=" " required>
+                <label for="phone" class="form-label">Phone Number</label>
+                <span class="form-error">Please enter your phone number</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <input type="date" id="event-date" name="event-date" class="form-control" placeholder=" " required>
+                <label for="event-date" class="form-label">Quinceañera Date</label>
+                <span class="form-error">Please select the event date</span>
+              </div>
+
+              <div class="form-group">
+                <select id="package" name="package" class="form-control select-control" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="classic">The Graceful Waltz ($750)</option>
+                  <option value="celebration">The Celebration Suite ($1,450)</option>
+                  <option value="royal">The Royal Spotlight ($2,200)</option>
+                  <option value="custom">Not Sure / Custom Mix</option>
+                </select>
+                <label for="package" class="form-label select-label">Select Package</label>
+                <span class="form-error">Please select a package</span>
+              </div>
+            </div>
+
+            <div class="form-group text-group">
+              <textarea id="message" name="message" class="form-control text-control" rows="4" placeholder=" "></textarea>
+              <label for="message" class="form-label">Tell us about your theme, music choice, or court size...</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+              Send Consultation Request
+            </button>
+            
+            <div class="form-success-message" id="form-success">
+              <span class="success-icon">&#10004;</span>
+              <div>
+                <h5>Thank You!</h5>
+                <p>Your request has been received. Isabella will contact you shortly to schedule your waltz consultation.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo-script footer-logo">Bella Danza</a>
+        <p class="footer-tagline">Making your quinceañera waltz and surprise dance a beautiful, stress-free celebration.</p>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Bella Danza Quinceañera. All rights reserved.</p>
+        <p class="designer-credits">Designed with love for dance & elegance.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ==========================================================================
+       INTERACTIVE MODULE - BELLA DANZA QUINCEAÑERA
+       ========================================================================== */
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initMobileMenu();
+      initScrollReveal();
+      initTestimonialsSlider();
+      initGalleryLightbox();
+      initBookingForm();
+    });
+
+    /* ==========================================================================
+       MOBILE MENU TOGGLE
+       ========================================================================== */
+    function initMobileMenu() {
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      const navLinks = document.querySelectorAll('.nav-item');
+
+      if (!mobileToggle || !navMenu) return;
+
+      const toggleMenu = () => {
+        mobileToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        if (navMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      };
+
+      mobileToggle.addEventListener('click', toggleMenu);
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navMenu.classList.contains('active')) {
+            toggleMenu();
+          }
+        });
+      });
+    }
+
+    /* ==========================================================================
+       SCROLL REVEAL ANIMATION (INTERSECTION OBSERVER)
+       ========================================================================== */
+    function initScrollReveal() {
+      const revealElements = document.querySelectorAll('.reveal');
+
+      if (revealElements.length === 0) return;
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      revealElements.forEach(el => observer.observe(el));
+    }
+
+    /* ==========================================================================
+       TESTIMONIALS SLIDER
+       ========================================================================== */
+    function initTestimonialsSlider() {
+      const slider = document.getElementById('testimonials-slider');
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const dots = document.querySelectorAll('#slider-dots .dot');
+      const prevBtn = document.getElementById('prev-testimonial');
+      const nextBtn = document.getElementById('next-testimonial');
+
+      if (!slider || slides.length === 0) return;
+
+      let currentIndex = 0;
+      let autoplayTimer = null;
+      const autoplayDelay = 6000;
+
+      const updateSlider = (index) => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        if (dots[index]) {
+          dots[index].classList.add('active');
+        }
+        currentIndex = index;
+      };
+
+      const nextSlide = () => {
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= slides.length) {
+          nextIndex = 0;
+        }
+        updateSlider(nextIndex);
+      };
+
+      const prevSlide = () => {
+        let prevIndex = currentIndex - 1;
+        if (prevIndex < 0) {
+          prevIndex = slides.length - 1;
+        }
+        updateSlider(prevIndex);
+      };
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          resetAutoplay();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          resetAutoplay();
+        });
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          updateSlider(index);
+          resetAutoplay();
+        });
+      });
+
+      const startAutoplay = () => {
+        autoplayTimer = setInterval(nextSlide, autoplayDelay);
+      };
+
+      const resetAutoplay = () => {
+        if (autoplayTimer) {
+          clearInterval(autoplayTimer);
+          startAutoplay();
+        }
+      };
+
+      startAutoplay();
+    }
+
+    /* ==========================================================================
+       GALLERY LIGHTBOX
+       ========================================================================== */
+    function initGalleryLightbox() {
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-image');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      const lightboxClose = document.getElementById('lightbox-close');
+
+      if (galleryItems.length === 0 || !lightbox || !lightboxImg) return;
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const fullImgUrl = item.getAttribute('data-image');
+          const captionText = item.getAttribute('data-caption');
+
+          lightboxImg.src = fullImgUrl;
+          lightboxImg.alt = captionText || 'Quinceañera Dance';
+          if (lightboxCaption) {
+            lightboxCaption.textContent = captionText || '';
+          }
+
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+      }
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+          closeLightbox();
+        }
+      });
+    }
+
+    /* ==========================================================================
+       BOOKING FORM VALIDATION
+       ========================================================================== */
+    function initBookingForm() {
+      const form = document.getElementById('booking-form');
+      const successMessage = document.getElementById('form-success');
+
+      if (!form) return;
+
+      const inputs = form.querySelectorAll('input[required], select[required]');
+
+      const validateInput = (input) => {
+        let isValid = true;
+        
+        input.classList.remove('error');
+
+        if (!input.value.trim()) {
+          isValid = false;
+        } else if (input.type === 'email') {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(input.value.trim())) {
+            isValid = false;
+          }
+        } else if (input.type === 'tel') {
+          const phoneClean = input.value.replace(/\D/g, '');
+          if (phoneClean.length < 7) {
+            isValid = false;
+          }
+        }
+
+        if (!isValid) {
+          input.classList.add('error');
+        }
+
+        return isValid;
+      };
+
+      inputs.forEach(input => {
+        input.addEventListener('blur', () => validateInput(input));
+        input.addEventListener('input', () => {
+          if (input.classList.contains('error')) {
+            validateInput(input);
+          }
+        });
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        let isFormValid = true;
+
+        inputs.forEach(input => {
+          const isInputValid = validateInput(input);
+          if (!isInputValid) {
+            isFormValid = false;
+          }
+        });
+
+        if (isFormValid) {
+          if (successMessage) {
+            successMessage.classList.add('active');
+            
+            setTimeout(() => {
+              form.reset();
+              inputs.forEach(input => input.classList.remove('error'));
+            }, 1000);
+          }
+        } else {
+          const firstError = form.querySelector('.error');
+          if (firstError) {
+            firstError.focus();
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
